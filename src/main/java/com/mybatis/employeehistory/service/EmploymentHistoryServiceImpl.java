@@ -16,10 +16,6 @@ import java.util.Optional;
 public class EmploymentHistoryServiceImpl implements EmploymentHistoryService{
    @Autowired
     EmpolymentHistoryRepo historyRepo;
-    @Override
-    public List<EmploymentHistory> getAllEmployeeHistory() {
-        return historyRepo.findAll();
-    }
 
     @Override
     public List<EmploymentHistory> searchByEmp_Id(int id) {

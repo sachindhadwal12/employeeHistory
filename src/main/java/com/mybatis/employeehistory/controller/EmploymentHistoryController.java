@@ -17,18 +17,12 @@ public class EmploymentHistoryController {
 
     @Autowired
     EmploymentHistoryService service;
-//    this method will fetch all data from employment_history table
-    @GetMapping("employeehistory")
-    public List<EmploymentHistory> getAllEmployeeHistory(){
-        return  service.getAllEmployeeHistory();
-    }
+
+
 // this method will fetch the details of employee based on Id
     @GetMapping("employeehistory/{id}")
     public List<EmploymentHistory> getEmployeeHistoryById(@PathVariable int id){
         return  service.searchByEmp_Id(id);
     }
-
-
-
 
 }
